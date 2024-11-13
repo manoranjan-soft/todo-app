@@ -1,0 +1,210 @@
+/* Main container styling */
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Input and button container styling */
+.inputTask {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Task input styling */
+.inputTask input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.inputTask input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+/* Add / Update button styling */
+.inputTask button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.inputTask button:hover {
+    background-color: #0056b3;
+}
+
+/* Task list item styling */
+.taskData {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+}
+
+.taskData:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Completed task styling */
+.taskData.completed p {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.7;
+}
+
+/* Task text and date styling */
+.taskText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskText p {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.taskDate {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Button styling within each task */
+.taskData button {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Done button styling */
+.taskData button:nth-child(2) {
+    background-color: #28a745;
+}
+
+.taskData button:nth-child(2):hover {
+    background-color: #218838;
+}
+
+/* Edit button styling */
+.taskData button:nth-child(3) {
+    background-color: #ffc107;
+}
+
+.taskData button:nth-child(3):hover {
+    background-color: #e0a800;
+}
+
+/* Remove button styling */
+.taskData button:nth-child(4) {
+    background-color: #dc3545;
+}
+
+.taskData button:nth-child(4):hover {
+    background-color: #c82333;
+}
+
+/* Icon spacing within buttons */
+.inputTask button i,
+.taskData button i {
+    margin-right: 4px;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+max-height: 12px;
+    
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+/* Footer text styling */
+.footer p {
+    margin: 0;
+
+    
+}
+
+/* Mobile and tablet responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .inputTask {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .inputTask button {
+        width: 100%;
+    }
+
+    .taskData {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .taskData button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Small screens and mobile view */
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .taskText p {
+        font-size: 14px;
+    }
+
+    .taskData button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
